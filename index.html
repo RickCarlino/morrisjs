@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MorrisJS Chart Samples</title>
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+</head>
+<body>
+<h1>Such Science.</h1>
+<div id="barChart" style="height: 250px;"></div>
+<h1>Many Numbers</h1>
+<div id="lineChart" style="height: 250px;"></div>
+<h1>Quite Maths.</h1>
+<div id="donutChart" style="height: 250px;"></div>
+<script>
+  new Morris.Bar({
+  // ID of the element in which to draw the chart.
+  element: 'barChart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+    {time: 1.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 2.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 3.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 4.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 5.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 6.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 7.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 8.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'time',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['val', 'val2', 'val3'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['First', 'Second', 'Third']
+});
+  new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'lineChart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+    {time: 1.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 2.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 3.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 4.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 5.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 6.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 7.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    {time: 8.0, val: (Math.random()*100), val2: (Math.random()*100), val3: (Math.random()*100)},
+    ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'time',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['val', 'val2', 'val3'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['First', 'Second', 'Third']
+});
+
+new Morris.Donut({
+  // ID of the element in which to draw the chart.
+  element: 'donutChart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+    {label: 'This', value: (Math.random()*100)},
+    {label: 'That', value: (Math.random()*100)},
+    {label: 'The Other', value: (Math.random()*100)},
+    {label: 'dot biz', value: (Math.random()*100)},
+    ],
+});
+</script>
+</body>
+</html>
